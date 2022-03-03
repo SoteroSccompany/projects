@@ -1,0 +1,120 @@
+$botmsg = array(
+    "Check-true" => "Ola, É um prazer falar com você novamente!",
+    "Check-false" => "Ola, É um prazer falar com você! Ainda não temos o seu contato salvo =(",
+    "InsertMenssage" => " Já cadastramos o seu contato =) ",
+
+
+);
+$menusecundarioPay = "Temos disponiveis 3 tipos de filiação: 
+                      Digite 01 para filiação anual (Pagamento a vista ou no cartão)
+                      Digite 02 para filiação semestral (Pagamento a vista ou no cartão)
+                      Digite 03 para assinatua menssal no cartão de crédito";
+
+$menuAções = "Temos disponiveis 3 ações em andamento: 
+Digite 01 Ação Caixa 
+Digite 02 Ação Petros
+Digite 03 Ação Postalis";
+
+if ($check == true && $status != true) {
+    //Salvar a menssagem se já estiver verificado!!!!
+    $objPessoa = new Pessoa();
+    $objPessoa->addmsg($telefone, $msgwpp, $botmsg["Check-true"]);
+    echo $botmsg["Check-true"];
+    //Mudar o status para ativo
+    Conversa::changeStatusOn($telefone);
+    //Aqui entra o update. do status, não criando outra conversa.
+
+
+    
+} else if ($check == true && $status == true) {
+    //Pega a menssagem e coloca em um switch case
+    
+    $objPessoa = new Pessoa();
+    $conv = new Conversa();
+    $menu = $conv->FindMenu($telefone);
+    //Olha se já teve alguma menssagem enviada
+    if($menu == 0){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, $menusecundarioPay);
+            $conv->addMenu($telefone,'1');
+            echo $menusecundarioPay;
+        }else if($msgwpp == 2){               
+            $conv->addMenu($telefone,'2');         
+            $objPessoa->addmsg($telefone, $msgwpp, $menuAções);
+            echo $menuAções;
+        }
+
+    
+    }else if($menu == 1){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAnual.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAnual.com.br";
+        }else if($msgwpp == 01){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAnual.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAnual.com.br";
+        }else if($msgwpp == 2){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoSemestral.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoSemestral.com.br";
+        }else if($msgwpp == 02){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoSemestral.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoSemestral.com.br";
+        }else if($msgwpp == 3){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAssinatura.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAssinatura.com.br";
+        }else if($msgwpp == 03){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAssinatura.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAssinatura.com.br";
+        }
+    }else if($menu == 2){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãocaixa.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãocaixa.com.br";
+        }else if($msgwpp == 01){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãocaixa.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãocaixa.com.br";
+        }else if($msgwpp == 2){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPetros.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPetros.com.br";
+        }else if($msgwpp == 02){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPetros.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPetros.com.br";
+        }else if($msgwpp == 3){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPostalis.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPostalis.com.br";
+        }else if($msgwpp == 03){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPostalis.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPostalis.com.br";               
+        }
+
+    }
+    
+
+
+    
+} else if ($check == false) {
+    echo $botmsg["Check-false"];
+    $obj = new Pessoa();
+    if ($obj->add($nome, $telefone, $msgwpp, $botmsg)) {
+        //Pessoa::FindSaveBotMsg($telefone, $nome, $botmsg);
+        echo $botmsg["InsertMenssage"];
+        //COMEÇA O ATENDIMENTO CASO SEJA A PRIMEIRA VEZ
+        //Switch aqui!
+
+
+
+    } else {
+        echo "Não foi possível realizar o seu cadastro =(";
+    }
+}

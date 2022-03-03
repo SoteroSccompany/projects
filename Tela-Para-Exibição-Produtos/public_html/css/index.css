@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/10/2018, 02:22:17
+    Author     : Gabriel
+*/
+
+#img{
+ width: 500px;
+ margin-right:700px;
+ float: right;
+}
+#i1{
+    width: 200px;
+}
+#i2{
+    width: 200px;
+}
+#i3{
+    width: 200px;
+}
+
+#fotosabx ul li{
+    display: inline;
+    margin-left:  20px ;   
+}
+#fotobaixo{   
+    margin-top: 500px;
+    margin-left: 250px;
+}
+#fotomeio{
+    margin-top: -500px;
+    margin-left: 250px;
+}
+#fotolad{
+    float: left;   
+    margin-right: 600px;
+    margin-top: -800px;
+}
+#fotolad ul{    
+    margin-top: 20px;    
+    list-style: none;
+}
+#ssd{
+    width: 150px
+}
+#fone{
+    width: 150px;
+}
+#xbox{
+    width: 150px;
+}
+#descrição{
+    float: right;
+    margin-top:-770px; 
+    
+}
+#descrição ul{
+    margin-right:40px;
+    margin-top: 10px;
+    
+}
+#form{
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 1500px;
+}
+#footer{
+    position: relative;
+}
+.alerta {
+	padding: 25px;
+	border: 1px solid gray;
+	border-radius: 3px;
+	margin: 10px;
+	font-size: 18px;
+}
+.error {
+	border-color: #e8273b;
+	color: #FFF;
+	background-color: #ed5565;
+}

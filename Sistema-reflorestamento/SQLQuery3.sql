@@ -1,0 +1,1 @@
+﻿SELECT * FROM Usuario WHERE loginn LIKE 'Admin' AND senha LIKE 'admin'

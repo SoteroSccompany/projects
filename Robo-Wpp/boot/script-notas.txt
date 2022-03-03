@@ -1,0 +1,68 @@
+//Olha se já teve alguma menssagem enviada
+    if($menu == 0){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, $menusecundarioPay);
+            $conv->addMenu($telefone,'1');
+            echo $menusecundarioPay;
+        }else if($msgwpp == 2){               
+            $conv->addMenu($telefone,'2');         
+            $objPessoa->addmsg($telefone, $msgwpp, $menuAções);
+            echo $menuAções;
+        }
+
+    
+    }else if($menu == 1){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAnual.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAnual.com.br";
+        }else if($msgwpp == 01){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAnual.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAnual.com.br";
+        }else if($msgwpp == 2){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoSemestral.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoSemestral.com.br";
+        }else if($msgwpp == 02){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoSemestral.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoSemestral.com.br";
+        }else if($msgwpp == 3){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAssinatura.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAssinatura.com.br";
+        }else if($msgwpp == 03){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkdepagamentoAssinatura.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkdepagamentoAssinatura.com.br";
+        }
+    }else if($menu == 2){
+        if($msgwpp == 1){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãocaixa.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãocaixa.com.br";
+        }else if($msgwpp == 01){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãocaixa.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãocaixa.com.br";
+        }else if($msgwpp == 2){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPetros.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPetros.com.br";
+        }else if($msgwpp == 02){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPetros.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPetros.com.br";
+        }else if($msgwpp == 3){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPostalis.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPostalis.com.br";
+        }else if($msgwpp == 03){
+            $objPessoa->addmsg($telefone, $msgwpp, "www.linkaçãoPostalis.com.br");
+            Conversa::changeStatusOff($telefone);
+            echo "www.linkaçãoPostalis.com.br";               
+        }
+
+    }
+    

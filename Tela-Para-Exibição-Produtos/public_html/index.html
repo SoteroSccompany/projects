@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <script src="js/index.js" type="text/javascrip"></script>
+        
+
+    </head>
+    <body link="#ffffcc" onload="TrocaaFtBxssd()">
+        <div id="contents">
+            <div id="header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="nav-item nav-link" href="index.html" style="color:#000;">Produtos Hardware WEB</a>
+                    <form class="form-inline" name="a">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="txtBusca" id="aa">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="Pesquisa()">Search</button>
+                    </form>
+                </nav>
+            </div>
+            <div id="contcenter">
+                <div id="foto">
+                    <div id="fotosabx">  
+                        <div id="fotomeio">
+                            <img name="img1" src="resources/img1.jpg" id="img">
+                        </div>
+                        <div id="fotobaixo">
+                            <ul id="aa">
+                                <li><a onclick="TrocaFoto()" id="a" ><img name="foto1" src="resources/img1.jpg" id="i1"></a></li>
+                                <li><a onclick="TrocaFoto1()" id="b"><img name="foto2" src="resources/img2.jpg" id="i2" ></a></li>
+                                <li><a onclick="TrocaFoto2()" id="c"><img name="foto3" src="resources/img3.jpg" id="i3"></a></li>
+                            </ul>
+                            <ul id="ab">
+                                <li><a onclick="TrocaFotof()" id="d" ><img name="foto1" src="resources/fone.jpg" id="i1"></a></li>
+                                <li><a onclick="TrocaFotof1()" id="e"><img name="foto2" src="resources/fone1.jpg" id="i2" ></a></li>
+                                <li><a onclick="TrocaFotof2()" id="f"><img name="foto3" src="resources/fone2.jpg" id="i3"></a></li>
+                            </ul>
+                            <ul id="ac">
+                                <li><a onclick="TrocaFotox()" id="g" ><img name="foto1" src="resources/xbox.jpg" id="i1"></a></li>
+                                <li><a onclick="TrocaFotox1()" id="h"><img name="foto2" src="resources/xbox1.jpg" id="i2" ></a></li>
+                                <li><a onclick="TrocaFotox2()" id="i"><img name="foto3" src="resources/xbox2.jpg" id="i3"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="fotolad">
+                        <ul>
+                            <li><a onclick="TrocaaFtBxssd()" ><img  src="resources/img1.jpg" id="ssd" ></a></li>
+                            <li><a onclick="TrocaFotoFone()" ><img src="resources/fone.jpg" id="fone"></a></li>
+                            <li><a onclick="TrocaaFtBxbox()" ><img src="resources/xbox.jpg" id="xbox"></a></li>
+                        </ul>
+                    </div>
+                    <div id="descrição">
+                        <ul style="list-style: none;">
+                            <li><h1>Descrição</h1></li>
+                            <li>
+                                <p id="txt">
+                                    Lorem Ipsum is simply dummy text of<br> 
+                                    the printing and typesetting industry.<br> 
+                                    Lorem Ipsum has been the industry's<br> 
+                                    standard dummy text ever since the 1500s,<br>
+                                    when an unknown printer took a galley of<br>
+                                    type and scrambled it to make a type specimen book.<br>
+
+                                </p>
+                            </li>
+                            <li><h1>Preço:</h3>
+                                    <p id="val1"><font size="40px">R$ 276,35</p>                                     
+                                    <button type="button" class="btn btn-primary" >Comprar</button>
+                            </li>
+                            <div>
+                                <p id="cod"><font size="40px">Código: MB0001</font></p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer">
+                   
+                    <p> <hr widhth="100%"  style="margin-top: 50px;"><font size="2px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</font></p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <script>
+            function Pesquisa(){
+                var c=document.a.txtBusca;
+                
+            if(c.value>50 ||c.value<5 ){
+                alert("Pesquise apenas números \n maiores que 5 e menores que 50");
+               
+               c.value="";
+             
+            }
+            
+            else{}
+
+}
+            
+            function TrocaaFtBxssd() {
+                document.img1.src = "resources/img1.jpg";
+                document.getElementById("a").style.display = "inline";
+                document.getElementById("b").style.display = "inline";
+                document.getElementById("c").style.display = "inline";
+                document.getElementById("d").style.display = "none";
+                document.getElementById("e").style.display = "none";
+                document.getElementById("f").style.display = "none";
+                document.getElementById("g").style.display = "none";
+                document.getElementById("h").style.display = "none";
+                document.getElementById("i").style.display = "none";
+                document.getElementById("val1").innerHTML = "R$ 276,35";
+                document.getElementById("txt").innerHTML = "Lorem Ipsum is simply dummy text of<br>the printing and typesetting industry.<br>Lorem Ipsum has been the industry's<br>standard dummy text ever since the 1500s,<br>when an unknown printer took a galley of<br>type and scrambled it to make a type specimen book.<br>";
+                document.getElementById("cod").innerHTML ="Código: MB0001";
+            }
+            function TrocaaFtBxbox() {
+                document.img1.src = "resources/xbox.jpg";
+                document.getElementById("a").style.display = "none";
+                document.getElementById("b").style.display = "none";
+                document.getElementById("c").style.display = "none";
+                document.getElementById("d").style.display = "none";
+                document.getElementById("e").style.display = "none";
+                document.getElementById("f").style.display = "none";
+                document.getElementById("g").style.display = "inline";
+                document.getElementById("h").style.display = "inline";
+                document.getElementById("i").style.display = "inline";
+                document.getElementById("val1").innerHTML = "R$ 1.495,91";
+                document.getElementById("txt").innerHTML = "Contrary to popular belief, Lorem ,<br>Ipsum is not simply random text.<br> It has roots in a piece of classical Latin<br> literature from 45 BC, making it over<br> 2000 years old. Richard McClintock, a <br>Latin professor at Hampden-Sydney College in Virginia,<br> looked up one of the more obscure Latin words, consectetur, from <br>a Lorem Ipsum passage, and going through the cites of the word in classical<br> literature, discovered the undoubtable source. Lorem Ipsum comes<br> from sections 1.10.32 and 1.10.33 of de 'Finibus Bonorum et Malorum' .";
+                document.getElementById("cod").innerHTML ="Código: MB0003";
+            }
+            function TrocaFotoFone() {
+                document.img1.src = "resources/fone.jpg";
+                document.getElementById("a").style.display = "none";
+                document.getElementById("b").style.display = "none";
+                document.getElementById("c").style.display = "none";
+                document.getElementById("d").style.display = "inline";
+                document.getElementById("e").style.display = "inline";
+                document.getElementById("f").style.display = "inline";
+                document.getElementById("g").style.display = "none";
+                document.getElementById("h").style.display = "none";
+                document.getElementById("i").style.display = "none";
+                document.getElementById("val1").innerHTML = "R$299,90";
+                document.getElementById("txt").innerHTML = "Lorem Ipsum is simply dummy text of<br>the printing and typesetting industry.<br>Lorem Ipsum has been the industry's<br>standard dummy text ever since the 1500s,<br>";
+                document.getElementById("cod").innerHTML ="Código: MB0002";
+    }
+
+
+
+
+
+            function TrocaFoto() {
+                document.img1.src = "resources/img1.jpg";
+            }
+
+
+
+            function TrocaFoto1() {
+                document.img1.src = "resources/img2.jpg";
+            }
+            function TrocaFoto2() {
+                document.img1.src = "resources/img3.jpg";
+            }
+
+            function TrocaFotof() {
+                document.img1.src = "resources/fone.jpg";
+            }
+
+            function TrocaFotof1() {
+                document.img1.src = "resources/fone1.jpg";
+            }
+
+            function TrocaFotof2() {
+                document.img1.src = "resources/fone2.jpg";
+            }
+
+            function TrocaFotox() {
+                document.img1.src = "resources/xbox.jpg";
+            }
+
+            function TrocaFotox1() {
+                document.img1.src = "resources/xbox1.jpg";
+            }
+
+            function TrocaFotox2() {
+                document.img1.src = "resources/xbox2.jpg";
+            }
+        </script>            
+    </body>
+</html>
